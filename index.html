@@ -49,6 +49,12 @@
       <span id="installNote">Use Chrome menu → Install app</span>
     </footer>
   </main>
-  <script type="module" src="./app.js"></script>
+  <script type="module" src="./app.js">
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+      navigator.serviceWorker.register("./sw.js");
+    });
+  }
+</script>
 </body>
 </html>

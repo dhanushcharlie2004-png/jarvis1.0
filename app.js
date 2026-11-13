@@ -86,3 +86,4 @@ if("serviceWorker" in navigator && location.protocol.startsWith("http")){
   window.addEventListener("load",()=>navigator.serviceWorker.register("./sw.js").catch(console.warn));
 }
 if(!("gpu" in navigator)) $("modelStatus").textContent="WebGPU not detected • local AI may not run in this browser";
+
