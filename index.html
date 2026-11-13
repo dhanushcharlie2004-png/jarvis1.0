@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#050b18">
+  <meta name="description" content="A private, local bilingual JARVIS assistant.">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" href="./icons/icon-192.png">
+  <title>JARVIS • Personal AI</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="top">
+      <div class="brand"><span class="brand-dot"></span><div><b>J.A.R.V.I.S.</b><small>PERSONAL LOCAL AI</small></div></div>
+      <span id="status" class="status">READY</span>
+    </header>
+
+    <section class="hero">
+      <div class="eyebrow">VOICE • INTELLIGENCE • PRIVACY</div>
+      <div class="reactor" id="reactor"><div class="ring r1"></div><div class="ring r2"></div><div class="ring r3"></div><div class="core"><span>J</span></div></div>
+      <h1>Good day.</h1>
+      <p class="subtitle">I'm listening. What can I help you with?</p>
+      <div class="model-line"><span class="pulse"></span><span id="modelStatus">AI model not loaded</span></div>
+    </section>
+
+    <section class="controls">
+      <button id="loadBtn" class="primary">Load local AI model</button>
+      <div class="row">
+        <button id="micBtn" class="mic" aria-label="Start voice input">🎙 <span>Speak</span></button>
+        <button id="stopBtn" class="secondary">Stop speaking</button>
+      </div>
+      <p class="hint">First model download is large (about 0.5–1 GB depending on model files). Keep this page open on Wi-Fi.</p>
+    </section>
+
+    <section class="chat" aria-live="polite">
+      <div id="messages" class="messages">
+        <div class="bubble assistant"><b>JARVIS</b><p>Hello! வணக்கம்! Load my local AI model, then ask me something in Tamil or English.</p></div>
+      </div>
+      <form id="chatForm" class="composer">
+        <textarea id="prompt" rows="1" placeholder="Ask JARVIS… / ஜார்விஸிடம் கேளுங்கள்" aria-label="Message"></textarea>
+        <button type="submit" id="sendBtn" aria-label="Send">➤</button>
+      </form>
+    </section>
+
+    <footer>
+      <span>LOCAL MODEL • NO PAID API KEY</span>
+      <span id="installNote">Use Chrome menu → Install app</span>
+    </footer>
+  </main>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>

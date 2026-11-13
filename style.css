@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700&family=Inter:wght@400;500;600&display=swap');
+:root{color-scheme:dark;--bg:#050b18;--cyan:#55eaff;--blue:#1c8fff;--muted:#8da7c7}
+*{box-sizing:border-box}
+body{margin:0;background:radial-gradient(ellipse at 50% 15%,#10284a 0%,#071326 38%,var(--bg) 75%);color:#eaf7ff;font-family:Inter,system-ui,sans-serif;min-height:100vh}
+.shell{max-width:760px;margin:auto;padding:env(safe-area-inset-top) 18px env(safe-area-inset-bottom);min-height:100vh;display:flex;flex-direction:column}
+.top{height:76px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #1d4160}
+.brand{display:flex;gap:12px;align-items:center}.brand-dot{width:12px;height:12px;border-radius:50%;background:var(--cyan);box-shadow:0 0 18px var(--cyan)}
+.brand b{font:700 16px Orbitron,sans-serif;letter-spacing:2px}.brand small{display:block;color:var(--muted);font-size:9px;letter-spacing:2px;margin-top:4px}
+.status{font:600 10px Orbitron;color:var(--cyan);border:1px solid #236080;padding:7px 10px;border-radius:20px;letter-spacing:1px}
+.hero{text-align:center;padding:34px 0 18px}.eyebrow{font:10px Orbitron;letter-spacing:3px;color:#7fb5d7}
+.reactor{width:176px;height:176px;margin:24px auto 18px;position:relative;display:grid;place-items:center}
+.ring{position:absolute;border:1px solid #39dfff;border-radius:50%;inset:0;box-shadow:0 0 18px #0ba6e866,inset 0 0 16px #0ba6e822}
+.r1{transform:rotateX(65deg) rotate(0deg)}.r2{inset:13px;transform:rotateY(65deg) rotate(45deg);border-color:#318cff}.r3{inset:25px;border-style:dashed;animation:spin 18s linear infinite}
+.core{width:76px;height:76px;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle,#b5faff 0%,#1da9d6 20%,#064a80 65%,#031a37 100%);box-shadow:0 0 25px #31dfff,0 0 65px #0b8cff88;color:white;font:700 30px Orbitron}
+@keyframes spin{to{transform:rotate(360deg)}}
+.hero h1{font:600 24px Orbitron;margin:8px 0}.subtitle{color:var(--muted);font-size:13px}.model-line{display:flex;align-items:center;justify-content:center;gap:8px;color:#91c8e8;font-size:11px;margin-top:18px}
+.pulse{width:7px;height:7px;border-radius:50%;background:#ffb84d;box-shadow:0 0 10px #ffb84d}
+.controls{max-width:520px;width:100%;margin:0 auto;text-align:center}
+button{border:0;cursor:pointer;font:600 13px Inter;border-radius:12px;padding:13px 17px;color:#eafaff}
+button:disabled{opacity:.45;cursor:not-allowed}.primary{width:100%;background:linear-gradient(100deg,#087bbd,#174caa);box-shadow:0 8px 26px #007dc544}
+.row{display:flex;gap:10px;margin-top:10px}.row button{flex:1}.mic{background:#0d3552;border:1px solid #26749a}.mic.listening{background:#8d243b;border-color:#ff6b8b}.secondary{background:#132239;border:1px solid #263f5d}
+.hint{font-size:10px;line-height:1.5;color:#829bb7;margin:10px 0 0}
+.chat{flex:1;display:flex;flex-direction:column;min-height:220px;margin:22px 0 12px;border:1px solid #183a58;border-radius:18px;background:#071426cc;overflow:hidden}
+.messages{padding:14px;overflow:auto;flex:1;max-height:42vh}.bubble{max-width:90%;padding:12px 14px;border-radius:14px;margin:0 0 12px;font-size:13px;line-height:1.55;white-space:pre-wrap;overflow-wrap:anywhere}
+.bubble p{margin:5px 0 0}.bubble b{font:600 9px Orbitron;letter-spacing:1px;color:var(--cyan)}.assistant{background:#10243a;border:1px solid #1d4564}.user{margin-left:auto;background:#103a5a;border:1px solid #1b6c91}
+.composer{display:flex;gap:8px;padding:10px;border-top:1px solid #183a58}.composer textarea{resize:none;flex:1;max-height:110px;background:#091a2d;color:white;border:1px solid #23435e;border-radius:12px;padding:12px;font:13px Inter;outline:none}.composer button{width:46px;background:#087bbd;font-size:20px}
+footer{display:flex;justify-content:space-between;gap:8px;color:#6686a7;font:9px Orbitron;letter-spacing:.7px;padding:12px 2px 18px}
+@media(min-width:650px){.hero{padding-top:44px}.messages{max-height:48vh}}
+\n#voiceLanguage{flex:1;min-width:0;background:#091a2d;color:#dff7ff;border:1px solid #23435e;border-radius:12px;padding:10px;font:12px Inter}\n
